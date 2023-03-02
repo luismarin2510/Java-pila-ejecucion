@@ -4,6 +4,7 @@ public class Flujo {
 	public static void main(String[] args) {
 		System.out.println("Inicio do main ");
 		metodo1();
+		metodo3();
 		System.out.println("fin del main");
 	}
 
@@ -17,8 +18,29 @@ public class Flujo {
 		System.out.println("inicio del metodo 2");
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
+			try {
+				int num = 0;
+				int resultado = i / num;
+				System.out.println(resultado);
+				String test = null;
+				System.out.println(test.toString());
+
+			} catch (ArithmeticException | NullPointerException exception) {
+				System.out.println("Atrapo excepcion ");
+				System.out.println(exception.getMessage());
+				exception.printStackTrace();
+			}
 		}
 		System.out.println("Fin del metodo 2");
 
+	}
+	
+	private static void metodo3() {
+		System.out.println("Inicio metodo 3");
+		int num = 0;
+		int resultado = 1 / num;
+		System.out.println(resultado);
+		throw new ArithmeticException();
+		
 	}
 }
