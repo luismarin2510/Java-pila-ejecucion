@@ -34,13 +34,10 @@ public class Flujo {
 		System.out.println("Fin del metodo 2");
 
 	}
-	
+
 	private static void metodo3() {
 		System.out.println("Inicio metodo 3");
-		int num = 0;
-		int resultado = 1 / num;
-		System.out.println(resultado);
-		throw new ArithmeticException();
-		
+		throw new excepciones("MI excepcion fue lanzada ");
+
 	}
 }
