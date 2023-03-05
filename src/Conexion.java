@@ -7,7 +7,7 @@ public class Conexion {
 
 	public void leerdatos() {
 		System.out.println("Recibiendo datos");
-
+		throw new IllegalStateException();
 	}
 
 	public void Cerrar() {
